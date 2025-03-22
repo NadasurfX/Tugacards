@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+header {
+  background: #ff0000; /* Cor de fundo do cabeçalho (exemplo) */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header .logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+header .logos img {
+  height: 60px; /* Ajuste conforme a imagem real */
+  width: auto;
+}
+
+.promo-section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.promo-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e74c3c;
+}
+
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Novo contêiner para cada oferta */
+.offer-item {
+  width: 280px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Imagem com o mesmo tamanho do contêiner */
+.offer-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1rem;
+}
+
+/* Estilo da caixa de oferta */
+.offer-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.offer-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.offer-box ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.offer-box ul li {
+  margin: 0.3rem 0;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #c0392b;
+}
+
+.info-section {
+  background: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.info-section p {
+  margin: 0.5rem 0;
+}
+
+.info-section .qr-code {
+  margin-top: 1rem;
+}
+
+footer {
+  background: #f1f1f1;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .offers {
+    flex-direction: column;
+    align-items: center;
+  }
+}
