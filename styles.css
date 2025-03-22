@@ -65,8 +65,10 @@ header .logos img {
 }
 
 .offer-item img {
+  /* Ajusta todas as imagens para a mesma largura e altura */
   width: 100%;
-  height: auto;
+  height: 180px;       /* Altura fixa para padronizar */
+  object-fit: cover;   /* Corta as bordas se a imagem for muito larga ou alta */
   border-radius: 8px 8px 0 0;
   margin-bottom: 1rem;
 }
@@ -94,88 +96,17 @@ header .logos img {
 }
 
 /* 
-   Três colunas:
+   Três colunas (nowrap):
    - pack-label (largura fixa, texto à esquerda)
    - pack-price (largura fixa, texto à direita)
    - old-price (largura fixa, texto à direita, riscado)
 */
 .offer-box ul li {
   display: flex;
-  flex-wrap: nowrap; /* Impede quebra de linha */
+  flex-wrap: nowrap;
   align-items: center;
   margin: 0.3rem 0;
 }
 
 .pack-label {
-  width: 80px;  /* Ajuste conforme necessário */
-  text-align: left;
-  white-space: nowrap;
-}
-
-.pack-price {
-  width: 60px;  /* Ajuste conforme necessário */
-  text-align: right;
-  white-space: nowrap;
-}
-
-.old-price {
-  width: 60px;  /* Ajuste conforme necessário */
-  text-align: right;
-  white-space: nowrap;
-  color: #999;  /* cor diferenciada para o preço antigo */
-}
-
-/* Botão de chamada para ação */
-.cta-btn {
-  display: inline-block;
-  padding: 0.8rem 1.2rem;
-  background: #e74c3c;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background: #c0392b;
-}
-
-.info-section {
-  background: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.info-section p {
-  margin: 0.5rem 0;
-}
-
-.info-section .qr-code {
-  margin-top: 1rem;
-}
-
-footer {
-  background: #f1f1f1;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .offers {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Ajuste as larguras para caber em telas menores */
-  .pack-label {
-    width: 70px;
-  }
-  .pack-price,
-  .old-price {
-    width: 50px;
-  }
-}
+  wi
