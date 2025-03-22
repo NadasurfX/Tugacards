@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background: #ff0000; /* Cor de fundo do cabeçalho (exemplo) */
+  background: #ff0000;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -32,7 +32,7 @@ header .logos {
 }
 
 header .logos img {
-  height: 60px; /* Ajuste conforme a imagem real */
+  height: 60px;
   width: auto;
 }
 
@@ -57,14 +57,13 @@ header .logos img {
   margin-top: 2rem;
 }
 
-/* Novo contêiner para cada oferta */
+/* Contêiner para cada oferta */
 .offer-item {
   width: 280px;
   max-width: 90%;
   text-align: center;
 }
 
-/* Imagem com o mesmo tamanho do contêiner */
 .offer-item img {
   width: 100%;
   height: auto;
@@ -76,7 +75,7 @@ header .logos img {
 .offer-box {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   text-align: center;
 }
@@ -89,14 +88,44 @@ header .logos img {
 
 .offer-box ul {
   list-style: none;
-  text-align: left;
   margin-bottom: 1rem;
+  padding: 0;
+  width: 100%;
 }
 
+/* 
+   Três colunas:
+   - pack-label (largura fixa, texto à esquerda)
+   - pack-price (largura fixa, texto à direita)
+   - old-price (largura fixa, texto à direita, riscado)
+*/
 .offer-box ul li {
+  display: flex;
+  flex-wrap: nowrap; /* Impede quebra de linha */
+  align-items: center;
   margin: 0.3rem 0;
 }
 
+.pack-label {
+  width: 80px;  /* Ajuste conforme necessário */
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pack-price {
+  width: 60px;  /* Ajuste conforme necessário */
+  text-align: right;
+  white-space: nowrap;
+}
+
+.old-price {
+  width: 60px;  /* Ajuste conforme necessário */
+  text-align: right;
+  white-space: nowrap;
+  color: #999;  /* cor diferenciada para o preço antigo */
+}
+
+/* Botão de chamada para ação */
 .cta-btn {
   display: inline-block;
   padding: 0.8rem 1.2rem;
@@ -139,5 +168,14 @@ footer {
   .offers {
     flex-direction: column;
     align-items: center;
+  }
+  
+  /* Ajuste as larguras para caber em telas menores */
+  .pack-label {
+    width: 70px;
+  }
+  .pack-price,
+  .old-price {
+    width: 50px;
   }
 }
