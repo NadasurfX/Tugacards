@@ -1,91 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>La Havana - Imagem Única</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Footer com Cabeçalho Responsivo</title>
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
+    /* contêiner centralizado */
+    #contatos {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 1.5em 1em;
+      text-align: center;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: #f9f9f9;
-      line-height: 1.6;
+    /* cabeçalho com imagem */
+    .header-img {
+      width: 100%;
+      margin-bottom: 1em;
     }
-
-    /* Cabeçalho */
-    header {
-      background: #ff0000;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header .logos {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 0.5rem;
-    }
-
-    header .logos img {
-      height: 60px;
-      width: auto;
-    }
-
-    /* Seção com Imagem Única */
-    .single-image-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      min-height: 50vh;
-      text-align: center;
-    }
-
-    .single-image-section img {
-      max-width: 100%;
+    .header-img img {
+      width: 100%;
       height: auto;
-      border-radius: 8px; /* Opcional: arredonda os cantos da imagem */
+      display: block;
+      object-fit: contain;
     }
 
-    /* Rodapé */
-    footer {
-      background: #f1f1f1;
-      padding: 1rem;
-      text-align: center;
+    /* títulos e textos */
+    #contatos h1 {
+      margin: 0.5em 0;
+      font-size: 1.5rem;
+    }
+    #contatos p {
+      margin: 0.25em 0;
       font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    #contatos a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    /* wrapper do mapa */
+    .map-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin-top: 1em;
+    }
+    .map-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* rodapé */
+    footer.site-footer {
+      margin-top: 2em;
+      padding: 1em 0;
+      background: #f1f1f1;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    /* otimizações para ecrãs muito pequenos */
+    @media (max-width: 360px) {
+      #contatos {
+        padding: 1em 0.5em;
+      }
+      #contatos h1 {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <h1>La Havana</h1>
-    <div class="logos">
-      <img src="/imagens/logo.png" alt="Logo Pokémon TCG">
-    </div>
-  </header>
 
-  <!-- Seção com a Imagem Centralizada -->
-  <section class="single-image-section">
-    <img src="/imagens/La Havana (3).png" alt="Minha Imagem">
+  <section id="contatos">
+    <div class="header-img">
+      <img src="header.jpg" alt="La Havana">
+    </div>
+
+    <h1>Visita-nos La Havana</h1>
+    <p>
+      R. Amoreiras 33<br>
+      5370-365 Mirandela
+    </p>
+    <p>
+      Direções:
+      <a href="https://maps.google.com/maps/dir//Agente+Nickel+-+LA+HAVANA+R.+Amoreiras+33+5370-365+Mirandela/@41.4844135,-7.1828402,20z"
+         target="_blank" rel="noopener">
+        Ver no Google Maps
+      </a>
+    </p>
+
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d186.80729112259732!2d-7.182750778521537!3d41.48440650700468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b0f50b78ed7ab%3A0x2918ff7e42c436b8!2sAgente%20Nickel%20-%20LA%20HAVANA!5e0!3m2!1sen!2spt!4v1745423046394!5m2!1sen!2spt"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 La Havana. Todos os direitos reservados.</p>
+  <footer class="site-footer">
+    © 2025 La Havana. Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
+
